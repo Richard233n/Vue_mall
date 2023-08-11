@@ -1,85 +1,61 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+    <div class="docker">
+        <div class="docker_item docker_item--active">
+            <div class="iconfont">&#xe67d;</div>
+            <div class="docker_title">首页</div>
+        </div>
+        <div class="docker_item ">
+            <div class="iconfont">&#xe639;</div>
+            <div class="docker_title">购物车</div>
+        </div>
+        <div class="docker_item ">
+            <div class="iconfont">&#xe62c;</div>
+            <div class="docker_title">订单</div>
+        </div>
+        <div class="docker_item ">
+            <div class="iconfont">&#xe633;</div>
+            <div class="docker_title">我的</div>
+        </div>
     </div>
-  </header>
-
-  <RouterView />
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
+<script setup>
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+</script>
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
+<style lang="scss">
+.docker {
     display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+    box-sizing: border-box;
+    position: absolute;
+    padding: 0 .18rem;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: .6rem;
+    border-top: .01rem solid #f1f1f1;
+    color: #333;
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+    &_item {
+        flex: 1;
+        text-align: center;
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+        .iconfont {
+            margin: .07rem 0 .02rem 0;
+            font-size: .18rem;
 
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
+        }
 
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+        &--active {
+            color: #1fa4fc
+        }
+    }
+
+    &_title {
+        font-size: .2rem;
+        transform: scale(.5, .5);
+        transform-origin: center top;
+
+    }
 }
 </style>
