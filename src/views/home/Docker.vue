@@ -26,8 +26,8 @@ export default {
     },
 };
 </script>
-<style lang="scss">
-@import "../style/variables.scss";
+<style lang="scss" scoped>
+@import "../../style/variables.scss";
 
 .docker {
     display: flex;
@@ -39,15 +39,14 @@ export default {
     width: 100%;
     height: 0.49rem;
     border-top: 0.01rem solid #f1f1f1;
-    color: $content-fontColor;;
-    
+    color: $content-fontColor;
 
     &_item {
         flex: 1;
         text-align: center;
 
         a {
-            color: $content-fontColor;;
+            color: $content-fontColor;
             text-decoration: none;
         }
 
